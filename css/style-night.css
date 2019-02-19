@@ -23,15 +23,6 @@ a:hover {
     padding-left: 15px;
 }
 
-.site-title {
-  display: block;
-  height: 50px;
-  width: 50px;
-  background: url("/themes/carbide/img/newlogo.png") no-repeat;
-  background-size: 50px;
-
-}
-
 .whiteFont {color: #fff;}
 .padding10 {padding: 10px;}
 .padding20 {padding: 20px;}
