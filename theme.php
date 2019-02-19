@@ -45,7 +45,7 @@ if(isset($_COOKIE['stylesheet'])) {
 
 </head>
 <body>
-	<div style="margin-top:65px">
+	<div style="margin-top:50px">
 	<?=wCMS::alerts()?>
 	<?=wCMS::settings()?>
     </div>
