@@ -53,7 +53,7 @@ a:hover {
 .navbar-inverse .navbar-toggle {
 	border-color: transparent;
 }
-.navbar-inverse .navbar-toggle:visited {
+.navbar-inverse .navbar-toggle:focus {
     background-color: #75b1f2;
 }
 .navbar-inverse .navbar-toggle:hover {
