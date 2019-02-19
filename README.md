@@ -19,4 +19,5 @@ https://wondercms-demo.000webhostapp.com/
 * 1.0.0 - 2019-02-18
  - Initial version.
  
-NOTE: This probably will not work for everyone as is, and is primarily for reference.
+NOTE: This probably will not work for everyone as is, and is primarily for reference/transparency.
+      Checkout the ```dry``` branch for a more usable theme.
