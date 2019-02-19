@@ -66,7 +66,7 @@ if(isset($_COOKIE['stylesheet'])) {
 	</nav>
 
 	<div class="container-fluid">
-		<div class="row-fluid">
+		<div class="row-fluid sm-gutter">
 			<div class="col-xs-12 col-sm-8">
 			<div class="box css3-shadow whiteBackground padding10">
 				<?=wCMS::page('content')?>
@@ -104,11 +104,8 @@ if(isset($_COOKIE['stylesheet'])) {
 		</div>
 	</div>
 
-	<footer class="container-fluid">
-		<div class="box css3-shadow whiteFont colorBackground padding20">
-			<p>Copyright 2019 "Filthy" Luis Cruz</p>
-
-		</div>
+	<footer class="container-fluid css3-shadow whiteFont colorBackground padding20">
+				<p><?= wCMS::footer() ?></p>
 	</footer>
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/jquery.autosize/3.0.17/autosize.min.js"></script>
