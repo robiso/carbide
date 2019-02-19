@@ -34,6 +34,7 @@ if(isset($_COOKIE['stylesheet'])) {
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#75b1f2">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?=wCMS::get('config','siteTitle')?> - <?=wCMS::page('title')?></title>
 	<meta name="description" content="<?=wCMS::page('description')?>">
@@ -44,11 +45,13 @@ if(isset($_COOKIE['stylesheet'])) {
 
 </head>
 <body>
+	<div style="margin-top:65px">
 	<?=wCMS::alerts()?>
 	<?=wCMS::settings()?>
+    </div>
 
-	<nav class="navbar navbar-inverse">
-		<div class="container css3-shadow colorBackground">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid css3-shadow colorBackground">
 			<div class="navbar-header padLeft15">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-collapse">
 					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
@@ -141,3 +144,4 @@ if(isset($_COOKIE['stylesheet'])) {
 	</script>
 </body>
 </html>
+
