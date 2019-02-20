@@ -53,13 +53,13 @@ if(isset($_COOKIE['stylesheet'])) {
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid css3-shadow colorBackground">
 			<div class="navbar-header padLeft15">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-collapse">
+				<button type="button" class="navbar-toggle x collapsed" data-toggle="collapse" data-target="#navbar-collapse-x">
 					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</button>
 				<a class="site-title" href="<?=wCMS::url()?>" title="Home">
 				</a>
 			</div>
-			<div class="collapse navbar-collapse" id="menu-collapse">
+			<div class="collapse navbar-collapse" id="navbar-collapse-x">
 				<ul class="nav navbar-nav navbar-right">
 					<?=wCMS::menu()?>
 
