@@ -6,7 +6,11 @@ html {
 body {
 	background: url(../img/noiseb.png)  repeat top left;
 	background-color: #262626;
-	font-family: "Lucida Sans Unicode", Verdana;
+	font-family: "Roboto", Lato, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 	color: #fff;
 	margin-bottom: 40px;
 }

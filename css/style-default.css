@@ -5,11 +5,16 @@ html {
 
 body {
 	background: url(../img/noise.png)  repeat top left;
-	font-family: "Lucida Sans Unicode", Verdana;
+	font-family: "Roboto", Lato, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 	color:#555;
 	margin-bottom: 40px;
 	overflow: scroll;
 }
+
 
 a {
 	color: #75b1f2;
