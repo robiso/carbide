@@ -64,71 +64,8 @@ a:hover {
 	transition: all 0.2s;
 }
 
-/* ANIMATED X */
-.navbar-toggle.x .icon-bar:nth-of-type(1) {
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	-o-transform: rotate(45deg);
-	transform: rotate(45deg);
-	-webkit-transform-origin: 10% 10%;
-	-moz-transform-origin: 10% 10%;
-	-ms-transform-origin: 10% 10%;
-	-o-transform-origin: 10% 10%;
-	transform-origin: 10% 10%;
-	background-color: #000;
-}
-
-.navbar-toggle.x .icon-bar:nth-of-type(2) {
-	opacity: 0;
-	filter: alpha(opacity=0);
-	background-color: #000;
-}
-
-.navbar-toggle.x .icon-bar:nth-of-type(3) {
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-	-webkit-transform-origin: 10% 90%;
-	-moz-transform-origin: 10% 90%;
-	-ms-transform-origin: 10% 90%;
-	-o-transform-origin: 10% 90%;
-	transform-origin: 10% 90%;
-	background-color: #000;
-}
-
-/* ANIMATED X COLLAPSED */
-.navbar-toggle.x.collapsed .icon-bar:nth-of-type(1) {
-	-webkit-transform: rotate(0);
-	-moz-transform: rotate(0);
-	-ms-transform: rotate(0);
-	-o-transform: rotate(0);
-	transform: rotate(0);
-}
-
-.navbar-toggle.x.collapsed .icon-bar:nth-of-type(2) {
-	opacity: 1;
-	filter: alpha(opacity=100);
-}
-.navbar-toggle.x.collapsed .icon-bar:nth-of-type(3) {
-	-webkit-transform: rotate(0);
-	-moz-transform: rotate(0);
-	-ms-transform: rotate(0);
-	-o-transform: rotate(0);
-	transform: rotate(0);
-}
-/* END ANIMATED X */
-
-.navbar-inverse .navbar-toggle.x {
+.navbar-light .navbar-toggler {
 	border-color: transparent;
-}
-.navbar-inverse .navbar-toggle.x:focus {
-    background-color: #75b1f2;
-}
-.navbar-inverse .navbar-toggle.x:hover {
-    background-color: #75b1f2;
 }
 
 .navbar .navbar-brand {
@@ -145,10 +82,23 @@ a:hover {
 .navbar li a {
 	color: #000 !important;
 }
-.navbar li a:hover, .active a {
-	color: #fff !important;
-	background: none !important;
+.navbar-light .navbar-nav > .active {
+    background-color: #88c4f9 !important;
+}
+.navbar-light .navbar-nav > .nav-item > a:focus, .navbar-light .navbar-nav > .nav-item > a:hover {
 	border-bottom: 1px solid #fff;
+    color: #fff !important;
+}
+.navbar-light .navbar-nav > .active > a:focus, .navbar-light .navbar-nav > .active > a:hover {
+	border-bottom: 1px solid #fff;
+    color: #fff !important;
+}
+
+.navbar-nav li {
+    text-align: center;
+}
+.navbar-nav > li > a {
+    padding-top: 14px;
 }
 
 .sm-gutter {
@@ -168,7 +118,6 @@ a:hover {
 	float: right;
 }
 .color-selector li p {
-    display: block;
     text-align: center;
     padding-top: 17px;
     padding-left: 4px;

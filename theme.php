@@ -11,7 +11,7 @@ function colorSelector ($args) {
 	$args[0] .= '
 <li>
 	<ul class="color-selector">
-		<li><a href="" id="nightmode"><span class="glyphicon glyphicon-adjust" style="color: black;" aria-hidden="true"></span></a></li><li><a href="" id="default"><span class="glyphicon glyphicon-adjust" style="color: white;" aria-hidden="true"></span></a></li>
+		<li><a href="" id="nightmode"><span class="fa fa-moon-o fa-lg" style="color: black;" aria-hidden="true"></span></a></li><li><a href="" id="default"><span class="fa fa-sun-o fa-lg" style="color: white;" aria-hidden="true"></span></a></li>
 	    <li><p><font size="-8">Theme</font></p></li>
 	</ul>
 </li>';
@@ -39,28 +39,28 @@ if(isset($_COOKIE['stylesheet'])) {
 	<title><?=wCMS::get('config','siteTitle')?> - <?=wCMS::page('title')?></title>
 	<meta name="description" content="<?=wCMS::page('description')?>">
 	<meta name="keywords" content="<?=wCMS::page('keywords')?>">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link id="stylesheet" rel="stylesheet" href="<?=wCMS::asset($css)?>">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link id="stylesheet" rel="stylesheet" href="<?=wCMS::asset($css)?>">
+
 	<?=wCMS::css()?>
 
 </head>
 <body>
-	<div style="margin-top:60px">
+	<div style="margin-top:80px">
 	<?=wCMS::alerts()?>
 	<?=wCMS::settings()?>
     </div>
 
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid css3-shadow colorBackground">
-			<div class="navbar-header padLeft15">
-				<button type="button" class="navbar-toggle x collapsed" data-toggle="collapse" data-target="#navbar-collapse-x">
-					<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-				</button>
-				<a class="site-title" href="<?=wCMS::url()?>" title="Home">
-				</a>
-			</div>
+	<nav class="navbar navbar-light navbar-expand-lg fixed-top colorBackground">
+		<div class="container-fluid">
+		    <a class="navbar-brand site-title" href="<?=wCMS::url()?>" title="Home"></a>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-collapse-x" aria-controls="navbar-collapse-x" aria-expanded="false" aria-label="Toggle Nav">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
 			<div class="collapse navbar-collapse" id="navbar-collapse-x">
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav ml-auto">
 					<?=wCMS::menu()?>
 
 				</ul>
@@ -103,18 +103,17 @@ if(isset($_COOKIE['stylesheet'])) {
 
 			</div>
 			</div>
-
 		</div>
+
 	</div>
 
 	<footer class="container-fluid css3-shadow whiteFont colorBackground padding20">
 				<p><?= wCMS::footer() ?></p>
 	</footer>
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/jquery.autosize/3.0.17/autosize.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<?=wCMS::js()?>
-	<script src="<?=wCMS::asset('js/js.cookie.js')?>"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <?=wCMS::js()?>
+    <script src="<?=wCMS::asset('js/js.cookie.js')?>"></script>
 	<script>
 		$( document ).ready(function() {
 			$('body').css('margin-bottom', $('footer').height()+'px');
