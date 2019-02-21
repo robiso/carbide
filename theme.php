@@ -69,7 +69,7 @@ if(isset($_COOKIE['stylesheet'])) {
 	</nav>
 
 	<div class="container-fluid">
-		<div class="row-fluid sm-gutter">
+	    <div class="row sm-gutter">
 			<div class="col-xs-12 col-sm-8">
 			<div class="box css3-shadow whiteBackground padding10">
 				<?=wCMS::page('content')?>
@@ -79,29 +79,25 @@ if(isset($_COOKIE['stylesheet'])) {
 			</div>
 			</div>
 			<div class="col-xs-12 col-sm-4">
-			<div class="box css3-shadow whiteBackground padding10">
-			    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1814967126/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/transparent=true/" seamless>
-			        <a href="http://carbide.bandcamp.com/album/house-of-snakes">House of Snakes by Carbide</a></iframe>
-            <?=newEditableArea()?>
-            </div>
-			</div>
-			<div class="col-xs-12 col-sm-4">
-			<div class="box css3-shadow whiteBackground padding10">
-				<?=wCMS::block('subside')?>
+			    <div class="box css3-shadow whiteBackground padding10">
+			        <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=1814967126/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/transparent=true/" seamless>
+			            <a href="http://carbide.bandcamp.com/album/house-of-snakes">House of Snakes by Carbide</a></iframe>
+                    <?=newEditableArea()?>
+                </div>
+			    <div class="box css3-shadow whiteBackground padding10">
+				    <?=wCMS::block('subside')?>
 
 
-				<div class="wrapper">
-				<div class="links">
-                <a href="https://open.spotify.com/artist/46FMfS2QJiBsbD42BYviN0"><svg class="svg-icon" style="width:30px; height:25px; fill:#75b1f2;"><use xlink:href="/files/minima-social-icons.svg#spotify"></use></svg></a>
-                <a href="https://instagram.com/carbide_band"><svg class="svg-icon" style="width:30px; height:25px; fill:#75b1f2;"><use xlink:href="/files/minima-social-icons.svg#instagram"></use></svg></a>
-                <a href="https://facebook.com/carbideband"><svg class="svg-icon" style="width:30px; height:25px; fill:#75b1f2;"><use xlink:href="/files/minima-social-icons.svg#facebook"></use></svg></a>
-                <a href="https://youtube.com/channel/UCqQJBHyLgElK4gSFF2d5d-g"><svg class="svg-icon" style="width:30px; height:25px; fill:#75b1f2;"><use xlink:href="/files/minima-social-icons.svg#youtube"></use></svg></a>
-                <a href="https://github.com/carbideband"><svg class="svg-icon" style="width:30px; height:25px; fill:#75b1f2;"><use xlink:href="/files/minima-social-icons.svg#github"></use></svg></a>
-			    </div>
-			    </div>
-
-
-			</div>
+				    <div class="wrapper">
+				    <div class="links">
+                    <a href="https://open.spotify.com/artist/46FMfS2QJiBsbD42BYviN0"><svg class="svg-icon" style="width:30px; height:25px; fill:#75b1f2;"><use xlink:href="/files/minima-social-icons.svg#spotify"></use></svg></a>
+                    <a href="https://instagram.com/carbide_band"><svg class="svg-icon" style="width:30px; height:25px; fill:#75b1f2;"><use xlink:href="/files/minima-social-icons.svg#instagram"></use></svg></a>
+                    <a href="https://facebook.com/carbideband"><svg class="svg-icon" style="width:30px; height:25px; fill:#75b1f2;"><use xlink:href="/files/minima-social-icons.svg#facebook"></use></svg></a>
+                    <a href="https://youtube.com/channel/UCqQJBHyLgElK4gSFF2d5d-g"><svg class="svg-icon" style="width:30px; height:25px; fill:#75b1f2;"><use xlink:href="/files/minima-social-icons.svg#youtube"></use></svg></a>
+                    <a href="https://github.com/carbideband"><svg class="svg-icon" style="width:30px; height:25px; fill:#75b1f2;"><use xlink:href="/files/minima-social-icons.svg#github"></use></svg></a>
+	    		    </div>
+		    	    </div>
+                </div>
 			</div>
 		</div>
 
