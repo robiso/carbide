@@ -11,7 +11,7 @@ function colorSelector ($args) {
 	$args[0] .= '
 <li>
 	<ul class="color-selector">
-		<li><a href="" id="nightmode"><span class="fa fa-moon-o fa-lg" style="color: black;" aria-hidden="true"></span></a></li><li><a href="" id="default"><span class="fa fa-sun-o fa-lg" style="color: white;" aria-hidden="true"></span></a></li>
+		<li><a href="" id="nightmode"><span class="fa fa-moon-o fa-lg" aria-hidden="true"></span></a></li><li><a href="" id="default"><span class="fa fa-sun-o fa-lg" aria-hidden="true"></span></a></li>
 	    <li><p><font size="-8">Theme</font></p></li>
 	</ul>
 </li>';
@@ -47,22 +47,23 @@ if(isset($_COOKIE['stylesheet'])) {
 
 </head>
 <body>
-	<div style="margin-top:80px">
+	<div style="margin-top:65px">
 	<?=wCMS::alerts()?>
 	<?=wCMS::settings()?>
     </div>
 
-	<nav class="navbar navbar-light navbar-expand-lg fixed-top colorBackground">
-		<div class="container-fluid">
+	<nav class="navbar navbar-light navbar-expand-lg fixed-top" id="thisNav" style="display:none;">
+		<div class="container-fluid colorBackground" style=" border-radius:4px;">
 		    <a class="navbar-brand site-title" href="<?=wCMS::url()?>" title="Home"></a>
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-collapse-x" aria-controls="navbar-collapse-x" aria-expanded="false" aria-label="Toggle Nav">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+			<button class="navbar-toggler navbar-toggler-right collapsed no-border" type="button" data-toggle="collapse" data-target="#navbar-collapse-x" aria-controls="navbar-collapse-x" aria-expanded="false" aria-label="Toggle Nav">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+            </button>
 
 			<div class="collapse navbar-collapse" id="navbar-collapse-x">
 				<ul class="nav navbar-nav ml-auto">
 					<?=wCMS::menu()?>
-
 				</ul>
 			</div>
 		</div>
@@ -90,11 +91,11 @@ if(isset($_COOKIE['stylesheet'])) {
 
 				    <div class="wrapper">
 				    <div class="links">
-                    <a href="https://open.spotify.com/artist/46FMfS2QJiBsbD42BYviN0"><svg class="svg-icon" style="width:30px; height:25px; fill:#75b1f2;"><use xlink:href="/files/minima-social-icons.svg#spotify"></use></svg></a>
-                    <a href="https://instagram.com/carbide_band"><svg class="svg-icon" style="width:30px; height:25px; fill:#75b1f2;"><use xlink:href="/files/minima-social-icons.svg#instagram"></use></svg></a>
-                    <a href="https://facebook.com/carbideband"><svg class="svg-icon" style="width:30px; height:25px; fill:#75b1f2;"><use xlink:href="/files/minima-social-icons.svg#facebook"></use></svg></a>
-                    <a href="https://youtube.com/channel/UCqQJBHyLgElK4gSFF2d5d-g"><svg class="svg-icon" style="width:30px; height:25px; fill:#75b1f2;"><use xlink:href="/files/minima-social-icons.svg#youtube"></use></svg></a>
-                    <a href="https://github.com/carbideband"><svg class="svg-icon" style="width:30px; height:25px; fill:#75b1f2;"><use xlink:href="/files/minima-social-icons.svg#github"></use></svg></a>
+                    <a href="https://open.spotify.com/artist/46FMfS2QJiBsbD42BYviN0"><span class="fa fa-spotify fa-lg padding7" style="color: #75b1f2;" aria-hidden="true"></span></a>
+                    <a href="https://instagram.com/carbide_band"><span class="fa fa-instagram fa-lg padding7" style="color: #75b1f2;" aria-hidden="true"></span></a>
+                    <a href="https://facebook.com/carbideband"><span class="fa fa-facebook-square fa-lg padding7" style="color: #75b1f2;" aria-hidden="true"></span></a>
+                    <a href="https://youtube.com/channel/UCqQJBHyLgElK4gSFF2d5d-g"><span class="fa fa-youtube-play fa-lg padding7" style="color: #75b1f2;" aria-hidden="true"></span></a>
+                    <a href="https://github.com/carbideband"><span class="fa fa-github fa-lg padding7" style="color: #75b1f2;" aria-hidden="true"></span></a>
 	    		    </div>
 		    	    </div>
                 </div>
@@ -106,7 +107,7 @@ if(isset($_COOKIE['stylesheet'])) {
 	<footer class="container-fluid css3-shadow whiteFont colorBackground padding20">
 				<p><?= wCMS::footer() ?></p>
 	</footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <?=wCMS::js()?>
     <script src="<?=wCMS::asset('js/js.cookie.js')?>"></script>
@@ -123,7 +124,7 @@ if(isset($_COOKIE['stylesheet'])) {
 						var stylesheet = $('#stylesheet').attr('href').replace(/css\/style\-(.*)/g, 'css/style-default.css');
 						break;
 				}
-				Cookies.set("stylesheet", c, { expires: 365 });
+				Cookies.set("stylesheet", c, { expires: 7 });
 				$("#stylesheet").attr({href: stylesheet});
 			}
 			
@@ -135,8 +136,21 @@ if(isset($_COOKIE['stylesheet'])) {
 				e.preventDefault();
 				change_stylesheet($(this).attr('id'));
 			});
+		    var prevScroll = 0;
+
+            $('#thisNav').fadeIn("fast");
+
+			$(window).scroll(function () {
+			    var currScroll = $('html').scrollTop();
+
+			    if ((currScroll > 80) && (prevScroll < currScroll)) {
+			        $('#thisNav').fadeOut("fast");
+			    } else if (((currScroll < prevScroll) && (prevScroll - currScroll >= 7)) || (currScroll <= 7 )) {
+			        $('#thisNav').fadeIn("fast");
+			    }
+			    prevScroll = currScroll;
+			});
 		});
 	</script>
 </body>
 </html>
-
