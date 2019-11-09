@@ -212,6 +212,9 @@ footer p {
     margin: auto;
 	color: #fff !important;
 }
+footer a {
+	color: #000 !important;
+}
 
 /* Drop shadow without images
  * http://www.prowebdesign.ro/round-brush-like-responsive-drop-shadows-with-css3-and-no-images/ */
