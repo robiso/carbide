@@ -212,7 +212,7 @@ footer {
 	bottom: 0;
 	width: 100%;
 	font-size: 13px;
-	position: absolute;
+	position: absolute !important;
 	text-align: center;
 }
 footer p {
