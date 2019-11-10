@@ -51,9 +51,9 @@
     </head>
     <body>
     	<div style="margin-top:60px">
-            <?= $Wcms->alerts() ?>
             <?= $Wcms->settings() ?>
-
+            <?= $Wcms->alerts() ?>
+            
         </div>
 
     	<nav class="navbar navbar-inverse navbar-fixed-top">
