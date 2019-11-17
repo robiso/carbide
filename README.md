@@ -1,6 +1,8 @@
 # Basically wcms-paper-p
 Carbide's Paper Portrait theme for WonderCMS (https://www.wondercms.com). This theme is a default Bootstrap theme like.
 
+## Author: Carbide: https://carbide.rocks
+
 ## Preview
 ![Theme preview](/preview.jpg)
 
